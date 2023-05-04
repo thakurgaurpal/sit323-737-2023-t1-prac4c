@@ -42,7 +42,7 @@ app.get("/super-secure-resource", (req, res) => {
     try {
 
 
-      // Token velidation
+      // Token velidation on postman
       const { user } = jsonwebtoken.verify(token, JWT_SECRET);
       return res.status(200).json({
         message: `Congrats ${user}! You can now accesss the super secret resource`,
